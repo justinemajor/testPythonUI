@@ -38,7 +38,18 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBox"/>
+       <widget class="QComboBox" name="comboBox">
+        <item>
+         <property name="text">
+          <string>Joie</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tristesse</string>
+         </property>
+        </item>
+       </widget>
       </item>
      </layout>
     </widget>
