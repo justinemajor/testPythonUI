@@ -1,8 +1,12 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QMainWindow, QApplication
 from PyQt5 import uic
 import os
+import sys
+
+
 testUiPath = os.path.dirname(os.path.realpath(__file__)) + '{0}testUi.ui'.format(os.sep)
 Ui_testUi, QtBaseClass = uic.loadUiType(testUiPath)
+
 
 class TestUi(QWidget, Ui_testUi):
     def __init__(self):
@@ -15,6 +19,7 @@ class TestUi(QWidget, Ui_testUi):
     def acquisition(self):
         print('yessssir je suis wow!')
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -26,6 +31,7 @@ class MainWindow(QMainWindow):
         # Set the central widget of the Window. Widget will expand
         # to take up all the space in the window by default.
         self.setCentralWidget(widget)
+
 
 app = QApplication(sys.argv)
 window = MainWindow()
